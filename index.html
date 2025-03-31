@@ -5,110 +5,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>김홍영클라쓰 홈페이지</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #ffffff;
       color: #333;
-      line-height: 1.6;
     }
-
+    
+    /* Header 디자인 */
     header {
-      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      border-bottom: 1px solid #f0f0f0;
-      background-color: #fff;
+      border-bottom: 2px solid #f0f0f0;
     }
-
+    
     header .logo {
-      width: 160px;
+      width: 200px;
     }
-
+    
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 30px;
     }
-
+    
     nav ul li a {
-      color: #444;
+      color: #111;
+      font-size: 16px;
       text-decoration: none;
-      font-size: 15px;
-      transition: 0.3s;
+      transition: color 0.3s, font-weight 0.3s;
     }
-
+    
     nav ul li a:hover {
       color: #00b894;
+      font-weight: bold;
     }
 
+    /* Main Banner */
     .banner {
       max-width: 1200px;
-      margin: 30px auto;
-      overflow: hidden;
+      margin: 50px auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
     }
-
+    
     .banner img {
       width: 100%;
       display: block;
     }
 
+    /* Footer 디자인 */
     footer {
       max-width: 1200px;
-      margin: 40px auto;
-      padding-top: 20px;
-      border-top: 1px solid #f0f0f0;
+      margin: 60px auto;
+      padding: 20px;
       text-align: center;
-    }
-
-    footer a {
-      color: #999;
-      text-decoration: none;
+      border-top: 2px solid #f0f0f0;
       font-size: 14px;
-      margin: 0 8px;
+    }
+    
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 12px;
       transition: color 0.3s;
     }
-
+    
     footer a:hover {
-      color: #666;
+      color: #333;
     }
 
-    /* 반응형 설정 */
+    /* 반응형 디자인 최적화 */
     @media (max-width: 768px) {
-      header {
+      header, footer {
+        padding: 15px 20px;
         flex-direction: column;
-        padding: 15px 10px;
+      }
+      
+      header .logo {
+        margin-bottom: 15px;
+        width: 160px;
       }
 
       nav ul {
         flex-wrap: wrap;
+        gap: 15px;
         justify-content: center;
-        margin-top: 15px;
       }
 
       .banner {
-        margin: 15px;
-      }
-
-      header .logo {
-        width: 140px;
-      }
-
-      footer {
-        font-size: 12px;
+        margin: 30px 10px;
       }
     }
   </style>
@@ -116,15 +114,15 @@
 
 <body>
 
-  <!-- 헤더 영역 -->
+  <!-- 상단 헤더 (로고, 메뉴) -->
   <header>
     <img src="./logo.png" alt="김홍영클라쓰 로고" class="logo">
     <nav>
       <ul>
-        <li><a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" target="_blank">26에센셜베이직 성적확인</a></li>
-        <li><a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a></li>
-        <li><a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a></li>
-        <li><a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램(어딘가노트)</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670">26에센셜베이직 성적확인</a></li>
+        <li><a href="https://cafe.naver.com/transferpass">편입화학 공식카페</a></li>
+        <li><a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ">유튜브</a></li>
+        <li><a href="https://www.instagram.com/somewherenote/">인스타그램(어딘가노트)</a></li>
       </ul>
     </nav>
   </header>
