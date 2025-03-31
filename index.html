@@ -4,114 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김홍영클라쓰 홈페이지</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fff;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* 상단 네비게이션 */
-    nav {
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* 상단바 */
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 24px;
-      background-color: #ffffff;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      padding: 16px 40px;
+      border-bottom: 1px solid #eee;
     }
 
-    .logo img {
-      height: 36px;
+    .logo {
+      height: 40px;
     }
 
-    .menu {
+    nav {
       display: flex;
       gap: 24px;
-      font-size: 15px;
     }
 
-    .menu a {
+    nav a {
       text-decoration: none;
+      color: #333;
       font-weight: 500;
+      transition: all 0.2s ease;
     }
 
-    .menu a:nth-child(1) { color: #d43c3c; }      /* 성적확인 */
-    .menu a:nth-child(2) { color: #1a7f24; }      /* 공식카페 */
-    .menu a:nth-child(3) { color: #e84326; }      /* 유튜브 */
-    .menu a:nth-child(4) { color: #ae3e7a; }      /* 인스타 */
-    
-    .menu a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #25c6a2;
+      border-bottom: 2px solid #25c6a2;
     }
 
-    /* 메인 이미지 */
+    /* 메인 배너 */
     .main-banner {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 40px auto;
-      text-align: center;
+      padding: 0 20px;
     }
 
     .main-banner img {
       width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
-    /* 하단 푸터 */
+    /* 하단 */
     footer {
-      margin-top: 40px;
-      padding: 20px 0;
+      margin-top: 60px;
+      padding: 30px 20px;
       text-align: center;
       font-size: 14px;
-      color: #555;
+      color: #777;
       border-top: 1px solid #eee;
     }
 
     footer a {
-      margin: 0 10px;
-      color: #333;
+      color: #555;
       text-decoration: none;
+      margin: 0 8px;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #000;
+      font-weight: 500;
     }
 
+    /* 반응형 */
     @media screen and (max-width: 768px) {
-      .menu {
-        flex-wrap: wrap;
-        justify-content: center;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 16px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .main-banner {
+        margin: 20px auto;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 상단 메뉴 -->
-  <nav>
-    <div class="logo">
-      <img src="logo.png" alt="로고" />
-    </div>
-    <div class="menu">
-      <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
+  <!-- 상단 -->
+  <header>
+    <img src="logo.png" alt="김홍영클라쓰 로고" class="logo" />
+    <nav>
+      <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
       <a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a>
       <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a>
       <a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램(어딘가노트)</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- 메인 배너 -->
+  <!-- 메인 이미지 -->
   <div class="main-banner">
-    <img src="main.png" alt="김홍영클라쓰 메인 배너" />
+    <img src="main.png" alt="2025 합격자 146명, 편입화학 이제는 김홍영클라쓰" />
   </div>
 
-  <!-- 하단 푸터 -->
+  <!-- 하단 약관 -->
   <footer>
     <a href="privacy.html">개인정보처리방침</a> |
     <a href="terms.html">이용약관</a>
