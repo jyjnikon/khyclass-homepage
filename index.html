@@ -9,142 +9,112 @@
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #fff;
-      color: #333;
     }
 
-    /* 상단 헤더 */
-    .site-header {
+    /* 상단 네비게이션 */
+    nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 20px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    .logo-area img {
-      height: 50px;
+    .logo img {
+      height: 36px;
     }
 
-    .main-nav ul {
+    .menu {
       display: flex;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      gap: 24px;
+      font-size: 15px;
     }
 
-    .main-nav a {
+    .menu a {
       text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s;
+      font-weight: 500;
     }
 
-    .main-nav a:hover {
+    .menu a:nth-child(1) { color: #d43c3c; }      /* 성적확인 */
+    .menu a:nth-child(2) { color: #1a7f24; }      /* 공식카페 */
+    .menu a:nth-child(3) { color: #e84326; }      /* 유튜브 */
+    .menu a:nth-child(4) { color: #ae3e7a; }      /* 인스타 */
+    
+    .menu a:hover {
       text-decoration: underline;
     }
 
-    .red { color: #d32f2f; }
-    .green { color: #388e3c; }
-    .orange { color: #ef6c00; }
-    .pink { color: #c2185b; }
-
-    /* 메인 배너 */
+    /* 메인 이미지 */
     .main-banner {
-      max-width: 1100px;
-      margin: 20px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      max-width: 1000px;
+      margin: 40px auto;
+      text-align: center;
     }
 
     .main-banner img {
       width: 100%;
       height: auto;
-      display: block;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     /* 하단 푸터 */
-    .site-footer {
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      color: #666;
-      border-top: 1px solid #eee;
+    footer {
       margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #eee;
     }
 
-    .site-footer ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
-
-    .site-footer a {
-      color: #444;
+    footer a {
+      margin: 0 10px;
+      color: #333;
       text-decoration: none;
     }
 
-    .site-footer a:hover {
+    footer a:hover {
       text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
-      .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      .site-header {
-        align-items: flex-start;
-      }
-
-      .logo-area {
-        width: 100%;
-      }
-
-      .main-nav {
-        width: 100%;
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 상단 헤더 -->
-  <header class="site-header">
-    <div class="logo-area">
-      <img src="logo.png" alt="김홍영클라쓰 로고" />
+  <!-- 상단 메뉴 -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="로고" />
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670" class="red">26에센셜베이직(의약대) 성적확인</a></li>
-        <li><a href="https://cafe.naver.com/transferpass" class="green">편입화학 공식카페</a></li>
-        <li><a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" class="orange">유튜브</a></li>
-        <li><a href="https://www.instagram.com/somewherenote/" class="pink">인스타그램(어딘가노트)</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="menu">
+      <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
+      <a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a>
+      <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a>
+      <a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램(어딘가노트)</a>
+    </div>
+  </nav>
 
-  <!-- 메인 배너 이미지 -->
+  <!-- 메인 배너 -->
   <div class="main-banner">
     <img src="main.png" alt="김홍영클라쓰 메인 배너" />
   </div>
 
   <!-- 하단 푸터 -->
-  <footer class="site-footer">
-    <ul>
-      <li><a href="privacy.html">개인정보처리방침</a></li>
-      <li><a href="terms.html">이용약관</a></li>
-    </ul>
+  <footer>
+    <a href="privacy.html">개인정보처리방침</a> |
+    <a href="terms.html">이용약관</a>
   </footer>
 
 </body>
