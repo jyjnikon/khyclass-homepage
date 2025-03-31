@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김홍영클라쓰 홈페이지</title>
-  <link rel="icon" href="logo.png" type="image/png" />
   <style>
     body {
       margin: 0;
@@ -12,66 +11,78 @@
       background-color: #fff;
       text-align: center;
     }
-    header img.banner {
+
+    .logo {
+      padding: 30px 0 10px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .main-banner img {
       width: 100%;
+      max-width: 1000px;
       height: auto;
       display: block;
+      margin: 0 auto;
     }
-    .logo {
-      width: 150px;
-      margin: 20px auto 10px;
-      display: block;
+
+    .footer-links {
+      margin: 40px 0 60px;
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
     }
-    footer {
-      margin: 30px 0;
-      font-size: 0.95rem;
-    }
+
     .footer-links a {
-      margin: 0 10px;
       text-decoration: none;
       color: #333;
       font-weight: 500;
     }
-    .footer-links a:nth-child(3) { color: #1a56db; } /* 블루 - 성적확인 */
-    .footer-links a:nth-child(4) { color: #2ca92c; } /* 그린 - 카페 */
-    .footer-links a:nth-child(5) { color: #d12c1f; } /* 레드 - 유튜브 */
-    .footer-links a:nth-child(6) { color: #c72c81; } /* 핑크 - 인스타 */
-    .footer-links a + span {
-      color: #ccc;
+
+    .footer-links a:nth-child(2) { color: #1a5aff; } /* 이용약관 */
+    .footer-links a:nth-child(3) { color: #d11e1e; } /* 성적확인 */
+    .footer-links a:nth-child(4) { color: #2ca02c; } /* 카페 */
+    .footer-links a:nth-child(5) { color: #d62c2c; } /* 유튜브 */
+    .footer-links a:nth-child(6) { color: #c3007c; } /* 인스타 */
+
+    .footer-links a:hover {
+      text-decoration: underline;
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 600px) {
       .footer-links {
-        display: flex;
         flex-direction: column;
-        gap: 6px;
-        align-items: center;
-      }
-      .footer-links a + span {
-        display: none;
+        gap: 8px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="김홍영클라쓰 로고" class="logo" />
-    <img src="main.png" alt="김홍영클라쓰 메인 배너" class="banner" />
-  </header>
 
-  <footer>
-    <div class="footer-links">
-      <a href="/privacy.html">개인정보처리방침</a>
-      <span>|</span>
-      <a href="/terms.html">이용약관</a>
-      <span>|</span>
-      <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
-      <span>|</span>
-      <a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a>
-      <span>|</span>
-      <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a>
-      <span>|</span>
-      <a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램(어딘가노트)</a>
-    </div>
-  </footer>
+  <!-- 로고 -->
+  <div class="logo">
+    <img src="logo.png" alt="김홍영클라쓰 로고">
+  </div>
+
+  <!-- 메인 배너 -->
+  <div class="main-banner">
+    <img src="main.png" alt="김홍영클라쓰 메인 배너">
+  </div>
+
+  <!-- 하단 링크 -->
+  <div class="footer-links">
+    <a href="terms.html">개인정보처리방침</a>
+    <a href="privacy.html">이용약관</a>
+    <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit#gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
+    <a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a>
+    <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a>
+    <a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램(어딘가노트)</a>
+  </div>
+
 </body>
 </html>
