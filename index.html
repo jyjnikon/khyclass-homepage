@@ -10,61 +10,44 @@
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #fff;
     }
-
-    header {
-      text-align: center;
-      padding: 0;
-    }
-
-    header img {
+    header.main-banner {
+      background: url('main.png') no-repeat center center / cover;
       width: 100%;
-      max-width: 1200px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+      height: 320px;
     }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      margin: 40px 0;
+    footer {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .footer-links a,
+    .footer-links span {
+      display: inline-block;
+      margin: 0 10px;
+      color: #000;
       font-size: 1rem;
-    }
-
-    .footer-links a {
       text-decoration: none;
-      color: #222;
-      font-weight: 500;
     }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .footer-links {
-        flex-direction: column;
-        gap: 12px;
+    @media screen and (max-width: 768px) {
+      header.main-banner {
+        height: 240px;
+      }
+      .footer-links a,
+      .footer-links span {
         font-size: 0.95rem;
+        margin: 0 8px;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="main.png" alt="김홍영클라쓰 메인 배너" />
-  </header>
+  <header class="main-banner"></header>
 
   <footer>
     <div class="footer-links">
-      <a href="privacy.html">개인정보처리방침</a>
+      <a href="/privacy.html">개인정보처리방침</a>
       <span>|</span>
-      <a href="terms.html">이용약관</a>
+      <a href="/terms.html">이용약관</a>
     </div>
   </footer>
-
 </body>
 </html>
