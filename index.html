@@ -8,75 +8,99 @@
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fff;
+      background: #fff;
       color: #222;
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 20px;
     }
 
+    /* HEADER */
     header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 20px 0;
+      flex-wrap: wrap;
     }
 
     .logo {
-      height: 60px;
+      height: 50px;
     }
 
+    .top-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-links a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .top-links a.score { color: #d11e1e; }
+    .top-links a.cafe { color: #2ca02c; }
+    .top-links a.youtube { color: #e84545; }
+    .top-links a.insta { color: #c3007c; }
+
+    .top-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* MAIN BANNER */
     .main-banner img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 12px;
+      border-radius: 10px;
     }
 
-    .footer-links {
-      margin: 40px 0 60px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 20px;
-    }
-
-    .footer-links a {
-      text-decoration: none;
-      padding: 8px 12px;
+    /* FOOTER */
+    footer {
+      text-align: center;
       font-size: 14px;
-      font-weight: 500;
-      border-radius: 6px;
-      transition: background 0.2s ease;
+      margin: 40px 0;
+      color: #777;
     }
 
-    /* 각각 강조 색상 */
-    .footer-links a.terms { color: #000; }
-    .footer-links a.privacy { color: #1a5aff; }
-    .footer-links a.score { color: #d11e1e; }
-    .footer-links a.cafe { color: #2ca02c; }
-    .footer-links a.youtube { color: #d62c2c; }
-    .footer-links a.insta { color: #c3007c; }
+    footer a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+    }
 
-    .footer-links a:hover {
-      background-color: #f2f2f2;
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       header {
         flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-links {
+        justify-content: flex-start;
+        margin-top: 10px;
+        gap: 12px;
       }
 
       .logo {
-        height: 48px;
+        height: 42px;
       }
 
-      .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
+      .top-links a {
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 13px;
       }
     }
   </style>
@@ -85,25 +109,28 @@
 
   <div class="container">
 
-    <!-- 헤더 로고 -->
+    <!-- HEADER -->
     <header>
-      <img src="logo.png" alt="김홍영클라쓰 로고" class="logo">
+      <img src="logo.png" alt="김홍영클라쓰 로고" class="logo" />
+
+      <div class="top-links">
+        <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit#gid=831589670" class="score" target="_blank">26에센셜베이직(의약대) 성적확인</a>
+        <a href="https://cafe.naver.com/transferpass" class="cafe" target="_blank">편입화학 공식카페</a>
+        <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" class="youtube" target="_blank">유튜브</a>
+        <a href="https://www.instagram.com/somewherenote/" class="insta" target="_blank">인스타그램(어딘가노트)</a>
+      </div>
     </header>
 
-    <!-- 메인 배너 -->
+    <!-- MAIN -->
     <div class="main-banner">
-      <img src="main.png" alt="김홍영클라쓰 메인 배너">
+      <img src="main.png" alt="김홍영클라쓰 메인 배너" />
     </div>
 
-    <!-- 하단 링크 -->
-    <div class="footer-links">
-      <a href="terms.html" class="terms">개인정보처리방침</a>
-      <a href="privacy.html" class="privacy">이용약관</a>
-      <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit#gid=831589670" class="score" target="_blank">26에센셜베이직(의약대) 성적확인</a>
-      <a href="https://cafe.naver.com/transferpass" class="cafe" target="_blank">편입화학 공식카페</a>
-      <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" class="youtube" target="_blank">유튜브</a>
-      <a href="https://www.instagram.com/somewherenote/" class="insta" target="_blank">인스타그램(어딘가노트)</a>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+      <a href="terms.html">개인정보처리방침</a> | 
+      <a href="privacy.html">이용약관</a>
+    </footer>
 
   </div>
 
