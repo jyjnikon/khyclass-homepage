@@ -4,109 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김홍영클라쓰 홈페이지</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #fff;
       color: #333;
     }
 
-    /* 상단바 */
+    /* 상단 헤더 */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 40px;
+      padding: 10px 30px;
       border-bottom: 1px solid #eee;
     }
 
-    .logo {
+    .logo img {
       height: 40px;
     }
 
     nav {
       display: flex;
-      gap: 24px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     nav a {
       text-decoration: none;
-      color: #333;
+      font-size: 14px;
       font-weight: 500;
-      transition: all 0.2s ease;
+      color: #222;
     }
 
-    nav a:hover {
-      color: #25c6a2;
-      border-bottom: 2px solid #25c6a2;
-    }
+    nav a:nth-child(1) { color: #b22222; }     /* 성적확인 */
+    nav a:nth-child(2) { color: #228B22; }     /* 카페 */
+    nav a:nth-child(3) { color: #d2691e; }     /* 유튜브 */
+    nav a:nth-child(4) { color: #c71585; }     /* 인스타 */
 
-    /* 메인 배너 */
+    /* 메인 배너 이미지 */
     .main-banner {
-      max-width: 1200px;
-      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
       padding: 0 20px;
     }
 
     .main-banner img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
     }
 
-    /* 하단 */
+    /* 푸터 */
     footer {
-      margin-top: 60px;
-      padding: 30px 20px;
       text-align: center;
+      padding: 20px;
       font-size: 14px;
-      color: #777;
       border-top: 1px solid #eee;
     }
 
     footer a {
-      color: #555;
       text-decoration: none;
-      margin: 0 8px;
+      color: #333;
+      margin: 0 10px;
     }
 
-    footer a:hover {
-      color: #000;
-      font-weight: 500;
-    }
-
-    /* 반응형 */
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        gap: 10px;
+        padding-top: 10px;
+      }
       header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .main-banner {
-        margin: 20px auto;
+        align-items: center;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- 상단 -->
   <header>
-    <img src="logo.png" alt="김홍영클라쓰 로고" class="logo" />
+    <div class="logo">
+      <img src="logo.png" alt="김홍영클라쓰 로고" />
+    </div>
     <nav>
       <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" target="_blank">26에센셜베이직(의약대) 성적확인</a>
       <a href="https://cafe.naver.com/transferpass" target="_blank">편입화학 공식카페</a>
@@ -115,16 +102,13 @@
     </nav>
   </header>
 
-  <!-- 메인 이미지 -->
   <div class="main-banner">
-    <img src="main.png" alt="2025 합격자 146명, 편입화학 이제는 김홍영클라쓰" />
+    <img src="main.png" alt="메인 배너 이미지" />
   </div>
 
-  <!-- 하단 약관 -->
   <footer>
     <a href="privacy.html">개인정보처리방침</a> |
     <a href="terms.html">이용약관</a>
   </footer>
-
 </body>
 </html>
