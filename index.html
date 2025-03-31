@@ -10,37 +10,61 @@
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #fff;
     }
+
     header {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
+      text-align: center;
+      padding: 0;
     }
+
     header img {
       width: 100%;
+      max-width: 1200px;
       height: auto;
       display: block;
+      margin: 0 auto;
     }
+
     .footer-links {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
       margin: 40px 0;
+      font-size: 1rem;
     }
+
     .footer-links a {
-      margin: 0 15px;
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
+      color: #222;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .footer-links {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="main.png" alt="김홍영클라쓰 메인 배너" />
   </header>
 
-  <div class="footer-links">
-    <a href="/privacy.html">개인정보처리방침</a>
-    <span>|</span>
-    <a href="/terms.html">이용약관</a>
-  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="terms.html">이용약관</a>
+    </div>
+  </footer>
+
 </body>
 </html>
