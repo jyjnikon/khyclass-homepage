@@ -1,143 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>김홍영클라쓰 홈페이지</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-    }
-    
-    /* Header 디자인 */
-    header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #f0f0f0;
-    }
-    
-    header .logo {
-      width: 200px;
-    }
-    
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    
-    nav ul li a {
-      color: #111;
-      font-size: 16px;
-      text-decoration: none;
-      transition: color 0.3s, font-weight 0.3s;
-    }
-    
-    nav ul li a:hover {
-      color: #00b894;
-      font-weight: bold;
-    }
-
-    /* Main Banner */
-    .banner {
-      max-width: 1200px;
-      margin: 50px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-    }
-    
-    .banner img {
-      width: 100%;
-      display: block;
-    }
-
-    /* Footer 디자인 */
-    footer {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 20px;
-      text-align: center;
-      border-top: 2px solid #f0f0f0;
-      font-size: 14px;
-    }
-    
-    footer a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 12px;
-      transition: color 0.3s;
-    }
-    
-    footer a:hover {
-      color: #333;
-    }
-
-    /* 반응형 디자인 최적화 */
-    @media (max-width: 768px) {
-      header, footer {
-        padding: 15px 20px;
-        flex-direction: column;
-      }
-      
-      header .logo {
-        margin-bottom: 15px;
-        width: 160px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-      }
-
-      .banner {
-        margin: 30px 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김홍영클라쓰 홈페이지</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        .header, .footer {
+            padding: 20px;
+        }
+        .header {
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+        .menu a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            color: #007bff;
+        }
+        .main-img {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .footer {
+            font-size: 14px;
+            color: #888;
+            border-top: 1px solid #f0f0f0;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .header, .menu {
+                flex-direction: column;
+            }
+            .menu a {
+                margin: 5px 0;
+            }
+            .logo img {
+                width: 150px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- 상단 헤더 (로고, 메뉴) -->
-  <header>
-    <img src="./logo.png" alt="김홍영클라쓰 로고" class="logo">
-    <nav>
-      <ul>
-        <li><a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670">26에센셜베이직 성적확인</a></li>
-        <li><a href="https://cafe.naver.com/transferpass">편입화학 공식카페</a></li>
-        <li><a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ">유튜브</a></li>
-        <li><a href="https://www.instagram.com/somewherenote/">인스타그램(어딘가노트)</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="header">
+    <div class="logo">
+        <img src="logo.png" alt="김홍영클라쓰 로고">
+    </div>
+    <div class="menu">
+        <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670">26에센셜베이직(의약대) 성적확인</a>
+        <a href="https://cafe.naver.com/transferpass">편입화학 공식카페</a>
+        <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ">유튜브</a>
+        <a href="https://www.instagram.com/somewherenote/">인스타그램(어딘가노트)</a>
+    </div>
+</div>
 
-  <!-- 메인 배너 -->
-  <section class="banner">
-    <img src="./main.png" alt="김홍영클라쓰 메인 배너">
-  </section>
+<img class="main-img" src="main.png" alt="메인 이미지">
 
-  <!-- 하단 푸터 -->
-  <footer>
-    <a href="privacy.html">개인정보처리방침</a> |
+<div class="footer">
+    <a href="privacy.html">개인정보처리방침</a> | 
     <a href="terms.html">이용약관</a>
-  </footer>
+</div>
 
 </body>
-
 </html>
