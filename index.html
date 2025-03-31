@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김홍영클라쓰 홈페이지</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4c2b90f717.js" crossorigin="anonymous"></script>
   <style>
     * {
       margin: 0;
@@ -42,9 +44,34 @@
     }
 
     .footer-links a {
-      color: #000;
       text-decoration: none;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links a.privacy {
+      color: #222;
+    }
+
+    .footer-links a.terms {
+      color: #222;
+    }
+
+    .footer-links a.grade {
+      color: #0056b3;
+    }
+
+    .footer-links a.cafe {
+      color: #03c75a;
+    }
+
+    .footer-links a.youtube {
+      color: #ff0000;
+    }
+
+    .footer-links a.instagram {
+      color: #c13584;
     }
 
     .footer-links span {
@@ -66,19 +93,25 @@
   </header>
 
   <div class="footer-links">
-    <a href="privacy.html">개인정보처리방침</a>
+    <a href="privacy.html" class="privacy"><i class="fa-solid fa-lock"></i> 개인정보처리방침</a>
     <span>|</span>
-    <a href="terms.html">이용약관</a>
+    <a href="terms.html" class="terms"><i class="fa-solid fa-file-signature"></i> 이용약관</a>
     <span>|</span>
-    <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" target="_blank">
-      26에센셜베이직(의약대) 성적확인
+    <a href="https://docs.google.com/spreadsheets/d/1hPn7TGupTu5sDHg7ph5OVVTbSKGSjSNA5THxiOZgWFY/edit?gid=831589670#gid=831589670" class="grade" target="_blank">
+      <i class="fa-solid fa-chart-line"></i> 26에센셜베이직(의약대) 성적확인
     </a>
     <span>|</span>
-    <a href="https://cafe.naver.com/transferpass" target="_blank">김홍영의 편입화학 공식카페</a>
+    <a href="https://cafe.naver.com/transferpass" class="cafe" target="_blank">
+      <i class="fa-solid fa-mug-hot"></i> 편입화학 공식카페
+    </a>
     <span>|</span>
-    <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" target="_blank">유튜브</a>
+    <a href="https://www.youtube.com/channel/UCPUHpFNocLT0sND47KryGiQ" class="youtube" target="_blank">
+      <i class="fa-brands fa-youtube"></i> 유튜브
+    </a>
     <span>|</span>
-    <a href="https://www.instagram.com/somewherenote/" target="_blank">인스타그램</a>
+    <a href="https://www.instagram.com/somewherenote/" class="instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> 인스타그램(어딘가노트)
+    </a>
   </div>
 </body>
 </html>
