@@ -46,21 +46,10 @@
             margin: 20px auto;
             border-radius: 10px;
         }
-        .description {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.8;
-            font-size: 17px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            color: #444;
-        }
         .footer {
             font-size: 14px;
             color: #888;
             border-top: 1px solid #f0f0f0;
-            padding-bottom: 60px;
         }
         .footer a {
             color: #666;
@@ -69,6 +58,18 @@
         }
         .footer a:hover {
             color: #000;
+        }
+        .app-info {
+            background: #f9f9f9;
+            padding: 25px 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            font-size: 15px;
+            line-height: 1.6;
+            border-radius: 10px;
+        }
+        .app-info strong {
+            font-weight: bold;
         }
         @media (max-width: 768px) {
             .header, .menu {
@@ -79,10 +80,6 @@
             }
             .logo img {
                 width: 150px;
-            }
-            .description {
-                margin: 20px;
-                font-size: 16px;
             }
         }
     </style>
@@ -103,10 +100,18 @@
 
 <img class="main-img" src="main.png" alt="메인 이미지">
 
-<div class="description">
-    <strong>김홍영화학교육연구소에서는 수험생들을 위한 맞춤형 학습 관리 서비스를 제공합니다.</strong><br><br>
-    본 애플리케이션은 구글 로그인(OAuth)을 통해 수험번호, 이름, 이메일을 안전하게 인증 받아<br>
-    학생 개개인의 학습 성과를 관리할 수 있도록 지원합니다.
+<div class="app-info">
+    <p><strong>김홍영화학교육연구소에서는 수험생들을 위한 맞춤형 학습 관리 서비스를 제공합니다.</strong></p>
+    <p>
+        본 애플리케이션은 구글 로그인(OAuth)을 통해 수험번호, 이름, 이메일을 안전하게 인증 받아  
+        학생 개개인의 학습 성과를 관리할 수 있도록 지원합니다.
+    </p>
+    <br>
+    <p><strong>Kim Hongyoung Education Research Institute provides personalized study management services for students.</strong></p>
+    <p>
+        This application uses Google OAuth login to securely verify exam number, name, and email,  
+        and supports personalized academic performance tracking for each student.
+    </p>
 </div>
 
 <div class="footer">
